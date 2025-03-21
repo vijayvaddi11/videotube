@@ -2,14 +2,14 @@
 
 //try and catch
 const asyncHandler = (fn) => {
-  async (req, res, next) =>{
+  return async (req, res, next) =>{
     try {
       await fn(req,res,next)
     
     } catch(error) {
       res.status(error.code || 500).json({
         success: false,
-        message:err.message
+        message:error.message
       })
   }
   };
@@ -19,11 +19,10 @@ const asyncHandler = (fn) => {
 export { asyncHandler };
 
 
-
 //middleware using promisses
 
 // const asyncHandler = (requestHandler) => {
-//   async (req, res, next) => {
+//   return async (req, res, next) => {
 //     Promise.resolve(requestHandler(req,res,next)).
 //       catch((err) => next(err))
 //   }
