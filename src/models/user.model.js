@@ -70,14 +70,14 @@ userSchema.methods.generateAcessToken = function () {
       username: this.username,
       fullname: this.fullname,
     },
-    process.env.ACCESS_TOCKEN_SECRET,
+    process.env.ACCESS_TOKEN_SECRET,
     {
       expiresIn: process.env.ACCESS_TOKEN_EXPIRY,
     }
   );
 }
 
-userSchema.models.generateRefreshToken = function () {
+userSchema.methods.generateRefreshToken = function () {
   return jwt.sign(
     {
       _id: this._id,
