@@ -31,3 +31,43 @@ videotube/
 ├── utils/           # Cloudinary config, file handling, etc.
 ├── .env             # Environment variables
 └── server.js        # Entry point of the app
+
+---
+
+## 🔧 Setup Instructions
+
+
+```bash
+1. **Clone the repository:**
+
+git clone https://github.com/vijayvaddi11/videotube.git
+cd videotube
+
+
+
+2. **Install dependencies:**
+
+npm install
+
+
+3. **Set up environment variables:**
+
+Create a .env file in the root with the following content:
+
+MONGO=your_mongodb_connection_string
+JWT=your_jwt_secret
+CLOUD_NAME=your_cloudinary_name
+API_KEY=your_cloudinary_api_key
+API_SECRET=your_cloudinary_api_secret
+
+
+4. **Run the server:**
+
+node seeds/index.js
+
+
+5. **Start the server:**
+
+npm start
+
+Server will be running on: http://localhost:5000
