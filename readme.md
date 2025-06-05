@@ -21,7 +21,7 @@ This is the backend of **VideoTube**, a video-sharing platform similar to YouTub
 - 🔍 Search videos by title or tags
 
 ## 📁 Project Structure
-
+```bash
 videotube/
 ├── controllers/     # Business logic for routes
 ├── models/          # Mongoose schemas
